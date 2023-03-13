@@ -18,7 +18,3 @@ while NOK % a != 0 or NOK % b != 0:
     NOK += 1
 
 print(NOK)
-
-
-
-
