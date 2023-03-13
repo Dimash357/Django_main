@@ -49,6 +49,11 @@
                 <span class="price">Price: ${{ ad.price }}</span>
 {#                <a href="{% url 'ad_detail' ad.id %}" class="btn btn-sm btn-outline-secondary">View</a>#}
               </div>
+                <div align="right">
+                <small class="text-muted">
+                        <a href="{% url 'ad_delete' ad.id %}" class="text-decoration-none btn"><i class="fa-solid fa-trash-can text-danger">Delete</i></a>
+                    </small>
+                    </div>
             </div>
           </div>
         </div>
