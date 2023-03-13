@@ -4,6 +4,7 @@ from . import models
 from .models import Ad
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.urls import reverse
 
 
 class CustomPaginator:
@@ -49,3 +50,9 @@ def ad_create(request):
         return redirect('ad_list')
     else:
         return render(request, 'ads/ad_create.html')
+   
+
+def ad_delete(request: HttpRequest, pk: int) -> HttpResponse:
+    ad = models.Ad.objects.get(id=pk)
+    ad.delete()
+    return redirect(reverse('ad_list', args=()))
