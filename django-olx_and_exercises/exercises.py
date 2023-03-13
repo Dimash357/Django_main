@@ -10,12 +10,12 @@ else:
 
 
 # Task 2
-import math
-a = int(input("Введите кол-во первой команды: "))
-b = int(input("Введите кол-во второй команды: "))
+a = int(input("Введите кол-во людей в команде биологов: "))
+b = int(input("Введите кол-во людей в команде информатиков: "))
+NOK = max(a, b)
 
-NOD = math.gcd(a, b)
-NOK = a * b // NOD
+while NOK % a != 0 or NOK % b != 0:
+    NOK += 1
 
 print(NOK)
 
